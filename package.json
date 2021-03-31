@@ -3,14 +3,6 @@
   "version": "1.0.0",
   "description": "Проект \"Велосипеды\" от Акселлератора",
   "main": "index.js",
-  "scripts": {
-    "test": "npm run editorconfig && npm run stylelint",
-    "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
-    "build": "gulp build",
-    "styles": "gulp styles",
-    "start": "gulp"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/meruyertaitkaliyeva/moon_bikes.git"
@@ -40,6 +32,7 @@
     "autoprefixer": "^10.2.5",
     "browser-sync": "^2.26.14",
     "del": "^6.0.0",
+    "editorconfig": "^0.15.3",
     "gulp": "^4.0.2",
     "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^3.0.0",
@@ -54,6 +47,14 @@
     "source/img/**/*.svg",
     "source/sass/**/*.scss"
   ],
+  "scripts": {
+    "test": "npm run editorconfig && npm run stylelint",
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "build": "gulp build",
+    "styles": "gulp styles",
+    "start": "gulp"
+  },
   "optionalDependencies": {
     "bufferutil": "^4.0.3",
     "utf-8-validate": "^5.0.4"
