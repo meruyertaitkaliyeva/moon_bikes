@@ -1,0 +1,13 @@
+.page {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: space-between;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $body-font-family;
+  text-align: center;
+  color: $basic-black;
+  background-color: $basic-white;
+  overflow-x: auto;
+}
