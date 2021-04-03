@@ -75,9 +75,9 @@
         </section>
         <section class="main__bikes bikes">
             <h2>Виды велосипедов</h2>
-            <ul>
-                <li>
-                    <div class="bikes__type">
+            <ul class="bikes__list">
+                <li class="bikes__item bikes__item--road">
+                    <div>
                         <picture>
                             <source media="(max-width: 767px)" srcset="img/mobile_road_bike.webp 1x, img/mobile_road_bike_x2.webp 2x" type="image/webp">
                             <source media="(max-width: 1023px)" srcset="img/tablet_road_bike.webp 1x, img/tablet_road_bike_x2.webp 2x" type="image/webp">
@@ -86,11 +86,11 @@
                             <source media="(max-width: 1023px)" srcset="img/tablet_road_bike.jpg 1x, img/tablet_road_bike_x2.jpg 2x" type="image/webp">
                             <img src="img/desktop_road_bike.jpg" srcset="img/desktop_road_bike_x2.jpg 2x" width="342" height="503" alt="Дорожный велосипед">
                         </picture>
-                        <p>Дорожный велосипед</p>
                     </div>
+                    <p>Дорожный велосипед</p>
                 </li>
-                <li>
-                    <div class="bikes__type">
+                <li class="bikes__item bikes__item--mount">
+                    <div>
                         <picture>
                             <source media="(max-width: 767px)" srcset="img/mobile_mount_bike.webp 1x, img/mobile_mount_bike_x2.webp 2x" type="image/webp">
                                 <source media="(max-width: 1023px)" srcset="img/tablet_mount_bike.webp 1x, img/tablet_mount_bike_x2.webp 2x" type="image/webp">
@@ -99,11 +99,11 @@
                                 <source media="(max-width: 1023px)" srcset="img/tablet_mount_bike.jpg 1x, img/tablet_mount_bike_x2.jpg 2x" type="image/webp">
                                 <img src="img/desktop_mount_bike.jpg" srcset="img/desktop_mount_bike_x2.jpg 2x" width="342" height="566" alt="Горный велосипед">
                         </picture>
-                        <p>Горный велосипед</p>
                     </div>
+                    <p>Горный велосипед</p>
                 </li>
-                <li>
-                    <div class="bikes__type">
+                <li class="bikes__item bikes__item--child">
+                    <div>
                         <picture>
                             <source media="(max-width: 767px)" srcset="img/mobile_child_bike.webp 1x, img/mobile_child_bike_x2.webp 2x" type="image/webp">
                                 <source media="(max-width: 1023px)" srcset="img/tablet_child_bike.webp 1x, img/tablet_child_bike_x2.webp 2x" type="image/webp">
@@ -112,17 +112,18 @@
                                 <source media="(max-width: 1023px)" srcset="img/tablet_child_bike.jpg 1x, img/tablet_child_bike_x2.jpg 2x" type="image/webp">
                                 <img src="img/desktop_child_bike.jpg" srcset="img/desktop_child_bike_x2.jpg 2x" width="342" height="513" alt="Детский велосипед">
                         </picture>
-                        <p>Детский велосипед</p>
                     </div>
+                    <p>Детский велосипед</p>
                 </li>
             </ul>
         </section>
         <section class="main__video video">
             <div class="video__intro">
               <h2>Видео про велосипеды</h2>
-            <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+              <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
             </div>
-            <picture>
+            <div class="video__pic">
+              <picture>
                 <source media="(max-width: 767px)" srcset="img/mobile_video.webp 1x, img/mobile_video_x2.webp 2x" type="image/webp">
                 <source media="(max-width: 1023px)" srcset="img/tablet_video.webp 1x, img/tablet_video_x2.webp 2x" type="image/webp">
                 <source srcset="img/desktop_video.webp 1x, img/desktop_video_x2.webp 2x" type="image/webp">
@@ -130,6 +131,7 @@
                 <source media="(max-width: 1023px)" srcset="img/tablet_video.jpg 1x, img/tablet_video_x2.jpg 2x" type="image/webp">
                 <img src="img/desktop_video.jpg" srcset="img/desktop_video_x2.jpg 2x" width="929" height="522" alt="Велосипед">
             </picture>
+            </div>
         </section>
         <section class="main__map map">
             <div class="map__intro">

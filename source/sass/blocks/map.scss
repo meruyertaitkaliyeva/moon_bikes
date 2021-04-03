@@ -1,3 +1,7 @@
+.map {
+  padding-top: 249px;
+}
+
 .map__intro {
   width: 555px;
   margin: 0 auto 40px;
@@ -36,6 +40,10 @@
 }
 
 @media (max-width: $tablet-breakpoint) {
+  .map {
+    padding-top: 155px;
+  }
+
   .map__intro {
     width: 629px;
     margin-bottom: 20px;
@@ -52,6 +60,10 @@
 }
 
 @media (max-width: $mobile-breakpoint) {
+  .map {
+    padding-top: 119px;
+  }
+
   .map__intro {
     width: 288px;
     margin-bottom: 25px;

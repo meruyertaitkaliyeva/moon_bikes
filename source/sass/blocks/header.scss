@@ -25,13 +25,13 @@
 
 .header {
   padding: 0 0 80px;
-  background-image: url("../../img/desktop_bg_bike.png");
+  background-image: url("../img/desktop_bg_bike.png");
   background-color: $basic-black;
   background-size: cover;
   background-repeat: no-repeat;
   box-sizing: border-box;
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/desktop_bg_bike_x2.png");
+    background-image: url("../img/desktop_bg_bike_x2.png");
   }
 }
 
@@ -58,7 +58,7 @@
   display: flex;
   justify-content: space-between;
   width: 880px;
-  margin-top: 256px;
+  margin: 256px auto 0;
 }
 
 .header__intro {
@@ -73,12 +73,13 @@
 
   & h2 {
     margin: 31px 0 24px;
-   font-weight: 700;
-   font-size: 46px;
-   line-height: 64px;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 64px;
   }
 
   & p {
+    margin: 0;
     font-weight: 300;
     font-size: 20px;
     line-height: 32px;
@@ -164,12 +165,12 @@
   }
 
   .header__navigation--closed .header__toggle {
-    background-image: url("../../img/burger.svg");
+    background-image: url("../img/burger.svg");
     background-color: $special-mint;
   }
 
   .header__navigation--opened .header__toggle {
-    background-image: url("../../img/cross.svg");
+    background-image: url("../img/cross.svg");
     background-color: $basic-white;
   }
 
@@ -197,7 +198,7 @@
         transform: translateY(-50%);
         width: 25px;
         height: 25px;
-        background-image: url("../../img/arrow.svg");
+        background-image: url("../img/arrow.svg");
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -271,10 +272,9 @@
 
   .header {
     height: 390px;
-    padding: 0 16px;
-    background-image: url("../../img/mobile_bg_bike.png");
+    background-image: url("../img/mobile_bg_bike.png");
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/mobile_bg_bike_x2.png");
+      background-image: url("../img/mobile_bg_bike_x2.png");
     }
   }
 
