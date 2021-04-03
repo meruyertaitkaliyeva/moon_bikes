@@ -36,7 +36,7 @@
         </nav>
         <div class="header__main">
           <div class="header__intro">
-              <img src="img/logo.svg" alt="Логотип Moon">
+              <img src="img/logo.svg" width="67" height="20" alt="Логотип Moon">
               <h2>Мы продаем велосипеды</h2>
               <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
           </div>
@@ -54,21 +54,21 @@
         <h1 class="visually-hidden">Онлайн-магазин велосипедов Moon</h1>
         <section class="main__facts facts">
             <h2>Несколько фактов о нас</h2>
-            <ul>
+            <ul class="facts__list">
                 <li>
-                    <p>01</p>
+                    <h3>01</h3>
                     <p>Самый широкий выбор велосипедов!</p>
                 </li>
                 <li>
-                    <p>02</p>
+                    <h3>02</h3>
                     <p>Доставка велосипедов по всей России!</p>
                 </li>
                 <li>
-                    <p>03</p>
+                    <h3>03</h3>
                     <p>Большой выбор крутых аксессуаров!</p>
                 </li>
                 <li>
-                    <p>04</p>
+                    <h3>04</h3>
                     <p>Профессиональные консультации</p>
                 </li>
             </ul>
@@ -117,9 +117,11 @@
                 </li>
             </ul>
         </section>
-        <section class="main__video">
-            <h2>Видео про велосипеды</h2>
+        <section class="main__video video">
+            <div class="video__intro">
+              <h2>Видео про велосипеды</h2>
             <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+            </div>
             <picture>
                 <source media="(max-width: 767px)" srcset="img/mobile_video.webp 1x, img/mobile_video_x2.webp 2x" type="image/webp">
                 <source media="(max-width: 1023px)" srcset="img/tablet_video.webp 1x, img/tablet_video_x2.webp 2x" type="image/webp">
@@ -129,33 +131,44 @@
                 <img src="img/desktop_video.jpg" srcset="img/desktop_video_x2.jpg 2x" width="929" height="522" alt="Велосипед">
             </picture>
         </section>
-        <section class="main__map">
-            <h2>Как нас найти?</h2>
-            <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-            <picture>
-                <source media="(max-width: 767px)" srcset="img/mobile_map.webp 1x, img/mobile_map_x2.webp 2x" type="image/webp">
-                    <source media="(max-width: 1023px)" srcset="img/tablet_map.webp 1x, img/tablet_map_x2.webp 2x" type="image/webp">
-                    <source srcset="img/desktop_map.webp 1x, img/desktop_map_x2.webp 2x" type="image/webp">
-                    <source media="(max-width: 767px)" srcset="img/mobile_map.jpg 1x, img/mobile_map_x2.jpg 2x" type="image/webp">
-                    <source media="(max-width: 1023px)" srcset="img/tablet_map.jpg 1x, img/tablet_map_x2.jpg 2x" type="image/webp">
-                    <img src="img/desktop_map.jpg" srcset="img/desktop_map_x2.jpg 2x" width="959" height="530" alt="Карта">
-            </picture>
+        <section class="main__map map">
+            <div class="map__intro">
+              <h2>Как нас найти?</h2>
+              <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+            </div>
+            <div class="map__wrapper">
+              <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651577!2d30.320894615967116!3d59.93879418187627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1617437422074!5m2!1sru!2sru"
+                    class="map__google"
+                    allowfullscreen=""
+                    aria-hidden="false"
+                    tabindex="0">
+              </iframe>
+              <picture>
+                  <source media="(max-width: 767px)" srcset="img/mobile_map.webp 1x, img/mobile_map_x2.webp 2x" type="image/webp">
+                      <source media="(max-width: 1023px)" srcset="img/tablet_map.webp 1x, img/tablet_map_x2.webp 2x" type="image/webp">
+                      <source srcset="img/desktop_map.webp 1x, img/desktop_map_x2.webp 2x" type="image/webp">
+                      <source media="(max-width: 767px)" srcset="img/mobile_map.jpg 1x, img/mobile_map_x2.jpg 2x" type="image/webp">
+                      <source media="(max-width: 1023px)" srcset="img/tablet_map.jpg 1x, img/tablet_map_x2.jpg 2x" type="image/webp">
+                      <img src="img/desktop_map.jpg" srcset="img/desktop_map_x2.jpg 2x" width="959" height="530" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19">
+              </picture>
+            </div>
         </section>
     </main>
     <footer class="page__footer footer">
         <nav class="footer__navigation">
-            <ul>
-                <li>
-                    <svg width="26" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <use xlink:href="img/sprite.svg#icon-mail"></use>
-                    </svg>
-                    <a href="tel:+749978468446">+7 (499) -784-684-46</a>
-                </li>
+            <ul class="footer__list">
                 <li>
                     <svg width="22" height="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                        <use xlink:href="img/sprite.svg#icon-phone"></use>
+                        <use xlink:href="img/sprite.svg#icon-mail"></use>
                     </svg>
                     <a href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+                </li>
+                <li>
+                    <svg width="26" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <use xlink:href="img/sprite.svg#icon-phone"></use>
+                    </svg>
+                    <a href="tel:+749978468446">+7 (499) -784-684-46</a>
                 </li>
             </ul>
         </nav>

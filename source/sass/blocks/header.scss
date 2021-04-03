@@ -24,7 +24,7 @@
 }
 
 .header {
-  padding: 0 302px 80px 305px;
+  padding: 0 0 80px;
   background-image: url("../../img/desktop_bg_bike.png");
   background-color: $basic-black;
   background-size: cover;
@@ -40,14 +40,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 833px;
+  margin: 0 auto;
   padding-top: 21px;
 }
-
-// .header__navigation li {
-//   &:not(:last-of-type) {
-//     margin-right: 135px;
-//   }
-// }
 
 .header__list a {
   font-weight: 300;
@@ -61,19 +57,27 @@
 .header__main {
   display: flex;
   justify-content: space-between;
-  padding-top: 256px;
+  width: 880px;
+  margin-top: 256px;
 }
 
 .header__intro {
   width: 393px;
   text-align: left;
   color: $basic-white;
+
+  & img {
+    width: 67px;
+    height: 20px;
+  }
+
   & h2 {
     margin: 31px 0 24px;
    font-weight: 700;
    font-size: 46px;
    line-height: 64px;
   }
+
   & p {
     font-weight: 300;
     font-size: 20px;
@@ -141,6 +145,8 @@
     position: absolute;
     top: 25px;
     left: 21px;
+    width: 67px;
+    height: 20px;
   }
 
   .header__toggle {
@@ -221,9 +227,9 @@
 
   .header__main {
     display: block;
-    width: 525px;
+    width: 435px;
     margin: auto;
-    padding-top: 134px;
+    margin-top: 134px;
   }
 
   .header__intro {
@@ -270,6 +276,11 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/mobile_bg_bike_x2.png");
     }
+  }
+
+  .header__main {
+    width: 288px;
+    margin-top: 120px;
   }
 
   .header__intro, .header__form {

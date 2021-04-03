@@ -1,0 +1,67 @@
+.map__intro {
+  width: 555px;
+  margin: 0 auto 40px;
+  & h2 {
+    @include heading-style;
+    margin: 0 0 30px;
+  }
+  & p {
+    font-size: 17px;
+    line-height: 31px;
+    opacity: 0.7;
+  }
+}
+
+.map__wrapper {
+  position: relative;
+  width: 957px;
+  height: 530px;
+  margin: 0 auto;
+}
+
+.map__google {
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin: 0 auto;
+}
+
+.map img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .map__intro {
+    width: 629px;
+    margin-bottom: 20px;
+    & h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+  }
+
+  .map__wrapper {
+    width: 698px;
+    height: 545px;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .map__intro {
+    width: 288px;
+    margin-bottom: 25px;
+    & h2 {
+      font-size: 18px;
+    }
+  }
+
+  .map__wrapper {
+    width: 100%;
+    height: 250px;
+  }
+}
