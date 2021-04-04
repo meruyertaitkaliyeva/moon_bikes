@@ -21,16 +21,16 @@
           </button>
             <ul class="header__list">
                 <li>
-                    <a href="#">О нас</a>
+                    <a href="#about">О нас</a>
                 </li>
                 <li>
-                    <a href="#">Виды велосипедов</a>
+                    <a href="#types">Виды велосипедов</a>
                 </li>
                 <li>
-                    <a href="#">Видео про велосипеды</a>
+                    <a href="#video">Видео про велосипеды</a>
                 </li>
                 <li>
-                    <a href="#">Контакты</a>
+                    <a href="#contacts">Контакты</a>
                 </li>
             </ul>
         </nav>
@@ -43,8 +43,8 @@
           <div class="header__form">
               <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
               <form action="" method="get">
-                  <input class="header__input" type="text" name="name" placeholder="Введите Ваше Имя">
-                  <input class="header__input" type="tel" name="tel" placeholder="Введите Ваш номер телефона">
+                  <input class="header__input" type="text" name="name" placeholder="Введите Ваше Имя" required>
+                  <input class="header__input" type="tel" name="tel" placeholder="Введите Ваш номер телефона" required>
                   <button class="header__button" type="submit">Подобрать велосипед мечты</button>
               </form>
           </div>
@@ -52,7 +52,7 @@
     </header>
     <main class="page__main main">
         <h1 class="visually-hidden">Онлайн-магазин велосипедов Moon</h1>
-        <section class="main__facts facts">
+        <section id="about" class="main__facts facts">
             <h2>Несколько фактов о нас</h2>
             <ul class="facts__list">
                 <li>
@@ -73,7 +73,7 @@
                 </li>
             </ul>
         </section>
-        <section class="main__bikes bikes">
+        <section id="types" class="main__bikes bikes">
             <h2>Виды велосипедов</h2>
             <ul class="bikes__list">
                 <li class="bikes__item bikes__item--road">
@@ -117,7 +117,7 @@
                 </li>
             </ul>
         </section>
-        <section class="main__video video">
+        <section id="video" class="main__video video">
             <div class="video__intro">
               <h2>Видео про велосипеды</h2>
               <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
@@ -133,10 +133,10 @@
             </picture>
             </div>
         </section>
-        <section class="main__map map">
+        <section id="contacts" class="main__map map">
             <div class="map__intro">
               <h2>Как нас найти?</h2>
-              <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+              <p>Мы находимся по адресу: <br>Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
             </div>
             <div class="map__wrapper">
               <iframe
@@ -161,13 +161,13 @@
         <nav class="footer__navigation">
             <ul class="footer__list">
                 <li>
-                    <svg width="22" height="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <svg width="26" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                         <use xlink:href="img/sprite.svg#icon-mail"></use>
                     </svg>
                     <a href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
                 </li>
                 <li>
-                    <svg width="26" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <svg width="21" height="22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                         <use xlink:href="img/sprite.svg#icon-phone"></use>
                     </svg>
                     <a href="tel:+749978468446">+7 (499) -784-684-46</a>

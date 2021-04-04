@@ -1,5 +1,6 @@
 .facts {
-  padding: 150px 0 131px;
+  padding: 150px 0;
+
   & h2 {
     @include heading-style;
     margin: 0 0 50px;
@@ -9,7 +10,6 @@
 .facts__list {
   @include list-style;
   display: flex;
-  // column-gap: 38px;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 0 137px;
@@ -30,6 +30,7 @@
     margin: 0;
     font-size: 22px;
     line-height: 34px;
+    letter-spacing: -0.5px;
   }
 }
 
@@ -59,6 +60,10 @@
 }
 
 @media (max-width: $mobile-breakpoint) {
+  .facts {
+    margin-top: 360px;
+  }
+
   .facts__list {
     display: block;
 
@@ -67,11 +72,11 @@
     }
 
     & li:not(:last-of-type) {
-      margin-bottom: 35px;
+      margin-bottom: 36px;
     }
 
     & p {
-      font-size: 18x;
+      font-size: 18px;
     }
   }
 }

@@ -1,5 +1,6 @@
 @media (min-width: $desktop-width) {
-  .header__logo, .header__toggle {
+  .header__logo,
+  .header__toggle {
     display: none;
   }
 
@@ -10,6 +11,7 @@
   .header__navigation {
     position: relative;
     min-height: 62px;
+
     &::after {
       content: "";
       position: absolute;
@@ -30,6 +32,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   box-sizing: border-box;
+
   @media (min-resolution: 2dppx) {
     background-image: url("../img/desktop_bg_bike_x2.png");
   }
@@ -49,7 +52,6 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 32px;
-  letter-spacing: -0,5%;
   color: $basic-white;
   opacity: 0.7;
 }
@@ -72,7 +74,7 @@
   }
 
   & h2 {
-    margin: 31px 0 24px;
+    margin: 28px 0 24px;
     font-weight: 700;
     font-size: 46px;
     line-height: 64px;
@@ -89,6 +91,8 @@
 
 .header__form {
   width: 327px;
+  margin-top: 5px;
+
   & p {
     margin: 0 0 20px;
     font-weight: 600;
@@ -108,7 +112,7 @@
   color: $basic-dark;
   opacity: 0.5;
   background-color: $basic-white;
-  border: 1px solid #C9CCD4;
+  border: 1px solid #c9ccd4;
   box-sizing: border-box;
   border-radius: 4px;
 }
@@ -137,6 +141,7 @@
     padding: 0;
     background-image: url("../img/tablet_bg_bike.png");
     overflow: visible;
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/tablet_bg_bike_x2.png");
     }
@@ -174,6 +179,12 @@
     background-color: $basic-white;
   }
 
+  .header__navigation--opened {
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+
   .header__list {
     display: block;
     position: absolute;
@@ -190,17 +201,18 @@
   .header__list li {
     position: relative;
     width: 100%;
+
     &::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        right: 16px;
-        transform: translateY(-50%);
-        width: 25px;
-        height: 25px;
-        background-image: url("../img/arrow.svg");
-        background-repeat: no-repeat;
-        background-position: center;
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      transform: translateY(-50%);
+      width: 25px;
+      height: 25px;
+      background-image: url("../img/arrow.svg");
+      background-repeat: no-repeat;
+      background-position: center;
     }
   }
 
@@ -236,33 +248,38 @@
   .header__intro {
     width: auto;
     text-align: center;
+
     & h2 {
       margin: 0 0 20px;
       font-size: 30px;
       line-height: 42px;
     }
+
     & p {
       font-size: 18px;
     }
-  }
-
-  .header__form, .header__input, .header__button {
-    width: 321px;
   }
 
   .header__form {
+    width: 325px;
     margin: 150px auto 0;
+
     & p {
+      margin-bottom: 30px;
       font-size: 18px;
       color: $basic-black;
     }
+  }
+
+  .header__input,
+  .header__button {
+    width: 321px;
   }
 
   .header__input {
     color: $special-dark;
     background-color: $basic-white;
   }
-
 }
 
 @media (max-width: $mobile-breakpoint) {
@@ -273,6 +290,7 @@
   .header {
     height: 390px;
     background-image: url("../img/mobile_bg_bike.png");
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/mobile_bg_bike_x2.png");
     }
@@ -283,11 +301,21 @@
     margin-top: 120px;
   }
 
-  .header__intro, .header__form {
+  .header__intro,
+  .header__form {
     width: auto;
   }
 
-  .header__input, .header__button {
+  .header__form {
+    margin-top: 140px;
+
+    & p {
+      margin-bottom: 20px;
+    }
+  }
+
+  .header__input,
+  .header__button {
     width: 288px;
   }
 }

@@ -12,7 +12,7 @@
   @include list-style;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 50px;
+  justify-content: space-between;
   position: relative;
   width: 1126px;
   margin: 0 auto;
@@ -22,25 +22,30 @@
 .bikes__item {
   position: relative;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     box-sizing: border-box;
   }
 
-  & img, & div {
+  & img,
+  & div {
     width: 342px;
   }
 
-  &--road img, &--road div {
+  &--road img,
+  &--road div {
     height: 503px;
   }
 
-  &--mount img, &--mount div {
+  &--mount img,
+  &--mount div {
     height: 566px;
   }
 
-  &--child img, &--child div {
+  &--child img,
+  &--child div {
     height: 513px;
   }
 
@@ -61,7 +66,8 @@
   &--mount {
     margin-top: 40px;
 
-    &::before, &::after {
+    &::before,
+    &::after {
       width: 47px;
       height: 47px;
       border: 8px solid $special-mint;
@@ -115,7 +121,7 @@
 
 @media (max-width: $tablet-breakpoint) {
   .bikes {
-    padding: 50px 0 70px;
+    padding: 48px 0 70px;
 
     & h2 {
       margin-bottom: 30px;
@@ -131,7 +137,8 @@
   .bikes__item {
     margin-top: 0;
 
-    & img, & div {
+    & img,
+    & div {
       width: 270px;
       height: 300px;
     }
@@ -147,13 +154,15 @@
     }
 
     &--mount {
-      &::before, &::after {
+      &::before,
+      &::after {
         content: none;
       }
     }
 
     &--child {
       margin: 50px auto 0;
+
       &::after {
         top: -20px;
         right: -25px;
@@ -167,12 +176,12 @@
 
 @media (max-width: $mobile-breakpoint) {
   .bikes {
-    width: auto;
-    padding: 50px 0;
+    padding: 52px 0 54px;
   }
 
   .bikes__list {
     display: block;
+    width: auto;
     margin: 0 auto;
   }
 
@@ -181,7 +190,7 @@
     margin: 0 auto;
 
     &:not(:last-of-type) {
-      margin-bottom: 40px;
+      margin-bottom: 42px;
     }
   }
 }
