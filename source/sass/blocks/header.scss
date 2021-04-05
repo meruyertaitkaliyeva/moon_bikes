@@ -234,12 +234,25 @@
     display: none;
   }
 
-  .header__navigation--nojs .header__toggle {
-    display: none;
-  }
+  .header--nojs {
+    margin-top: 468px;
 
-  .header__navigation--nojs .header__list {
-    display: block;
+    & .header__toggle {
+      display: none;
+    }
+
+    & .header__list {
+      display: block;
+      position: absolute;
+      top: -468px;
+      min-height: 468px;
+      padding-bottom: 0;
+    }
+
+    & .header__logo {
+      top: -443px;
+      z-index: 2;
+    }
   }
 
   .header__main {
