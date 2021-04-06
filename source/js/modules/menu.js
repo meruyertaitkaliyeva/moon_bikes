@@ -1,5 +1,6 @@
 'use strict';
 
+const body = document.body;
 const headerMain = document.querySelector(".header");
 const navMain = document.querySelector(".header__navigation");
 const navOpenButton = document.querySelector(".header__button--open");
@@ -14,6 +15,9 @@ navOpenButton.addEventListener("click", function() {
     navMain.classList.add("header__navigation--opened");
     navOpenButton.style.display="none";
     navCloseButton.style.display="block";
+    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+    body.style.position = 'fixed';
+    body.style.top = `-${scrollY}`;
   }
 });
 
@@ -22,10 +26,12 @@ navCloseButton.addEventListener("click", function() {
   navMain.classList.remove("header__navigation--opened");
   navCloseButton.style.display="none";
   navOpenButton.style.display="block";
+  const scrollY = body.style.top;
+  body.style.position = '';
+  body.style.top = '';
+  window.scrollTo(0, parseInt(scrollY || '0') * -1);
 });
 
-import bodyScrollLock from 'body-scroll-lock';
-const disableBodyScroll = bodyScrollLock.disableBodyScroll;
-const enableBodyScroll = bodyScrollLock.enableBodyScroll;
-disableBodyScroll(targetElement);
-enableBodyScroll(targetElement);
+window.addEventListener('scroll', () => {
+  document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+});
