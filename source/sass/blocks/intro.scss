@@ -1,0 +1,191 @@
+.intro {
+  display: flex;
+  background-image: url("../img/desktop_bg_bike.png");
+  background-color: $basic-black;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/desktop_bg_bike_x2.png");
+  }
+}
+
+.intro__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 318px auto 240px;
+  width: 880px;
+  box-sizing: border-box;
+}
+
+.intro__text {
+  width: 393px;
+  text-align: left;
+  color: $basic-white;
+
+  & svg {
+    width: 67px;
+    height: 20px;
+  }
+
+  & h1 {
+    margin: 28px 0 24px;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 64px;
+  }
+
+  & p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
+    opacity: 0.8;
+  }
+}
+
+.intro__form {
+  width: 327px;
+  margin-top: 5px;
+
+  & p {
+    margin: 0 0 20px;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 28px;
+    color: $basic-white;
+  }
+}
+
+.intro__input input {
+  width: 327px;
+  height: 48px;
+  margin-bottom: 20px;
+  padding: 14px 29px 10px;
+  font-size: 15px;
+  line-height: 24px;
+  color: $basic-dark;
+  opacity: 0.5;
+  background-color: $basic-white;
+  border: 1px solid #c9ccd4;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  &:focus,
+  &:active {
+    outline-color: $special-mint;
+  }
+}
+
+.intro__submit {
+  width: 326px;
+  height: 51px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 21px;
+  color: $basic-black;
+  background-color: $special-mint;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:focus,
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .intro {
+    height: 340px;
+    padding: 0;
+    background-image: url("../img/tablet_bg_bike.png");
+    overflow: visible;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/tablet_bg_bike_x2.png");
+    }
+  }
+
+  .intro__wrapper {
+    display: block;
+    margin: auto;
+    margin-top: 134px;
+    width: 435px;
+  }
+
+  .intro__text {
+    width: auto;
+    text-align: center;
+
+    & svg {
+      display: none;
+    }
+
+    & h1 {
+      margin: 0 0 20px;
+      font-size: 30px;
+      line-height: 42px;
+    }
+
+    & p {
+      font-size: 18px;
+    }
+  }
+
+  .intro__form {
+    width: 325px;
+    margin: 150px auto 0;
+
+    & p {
+      margin-bottom: 30px;
+      font-size: 18px;
+      color: $basic-black;
+    }
+  }
+
+  .intro__input input,
+  .intro__submit {
+    width: 321px;
+  }
+
+  .intro__input input {
+    color: $special-dark;
+    background-color: $basic-white;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .intro {
+    height: 390px;
+    background-image: url("../img/mobile_bg_bike.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/mobile_bg_bike_x2.png");
+    }
+  }
+
+  .intro__wrapper {
+    width: 288px;
+    margin-top: 120px;
+  }
+
+  .intro__text,
+  .intro__form {
+    width: auto;
+  }
+
+  .intro__form {
+    margin-top: 140px;
+
+    & p {
+      margin-bottom: 20px;
+    }
+  }
+
+  .intro__input input,
+  .intro__submit {
+    width: 288px;
+  }
+}

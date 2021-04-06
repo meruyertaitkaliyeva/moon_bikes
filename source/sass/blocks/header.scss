@@ -1,11 +1,16 @@
 @media (min-width: $desktop-width) {
   .header__logo,
-  .header__toggle {
+  .header__button {
     display: none;
   }
 
   .header {
-    min-height: 825px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    min-height: 62px;
+    background-color: transparent;
   }
 
   .header__navigation {
@@ -23,18 +28,17 @@
       background-color: rgba(255, 255, 255, 0.2);
     }
   }
-}
 
-.header {
-  padding: 0 0 80px;
-  background-image: url("../img/desktop_bg_bike.png");
-  background-color: $basic-black;
-  background-size: cover;
-  background-repeat: no-repeat;
-  box-sizing: border-box;
+  .header__item a {
+    &:focus,
+    &:hover {
+      color: $special-mint;
+    }
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/desktop_bg_bike_x2.png");
+    &:active {
+      color: $special-mint;
+      opacity: 0.5;
+    }
   }
 }
 
@@ -56,96 +60,15 @@
   opacity: 0.7;
 }
 
-.header__main {
-  display: flex;
-  justify-content: space-between;
-  width: 880px;
-  margin: 256px auto 0;
-}
-
-.header__intro {
-  width: 393px;
-  text-align: left;
-  color: $basic-white;
-
-  & img {
-    width: 67px;
-    height: 20px;
-  }
-
-  & h2 {
-    margin: 28px 0 24px;
-    font-weight: 700;
-    font-size: 46px;
-    line-height: 64px;
-  }
-
-  & p {
-    margin: 0;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 32px;
-    opacity: 0.8;
-  }
-}
-
-.header__form {
-  width: 327px;
-  margin-top: 5px;
-
-  & p {
-    margin: 0 0 20px;
-    font-weight: 600;
-    font-size: 17px;
-    line-height: 28px;
-    color: $basic-white;
-  }
-}
-
-.header__input {
-  width: 327px;
-  height: 48px;
-  margin-bottom: 20px;
-  padding: 14px 29px 10px;
-  font-size: 15px;
-  line-height: 24px;
-  color: $basic-dark;
-  opacity: 0.5;
-  background-color: $basic-white;
-  border: 1px solid #c9ccd4;
-  box-sizing: border-box;
-  border-radius: 4px;
-}
-
-.header__button {
-  width: 326px;
-  height: 51px;
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 15px;
-  line-height: 21px;
-  color: $basic-black;
-  background-color: $special-mint;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
 @media (max-width: $tablet-breakpoint) {
-  .header__intro img {
+  .header__intro svg {
     display: none;
   }
 
   .header {
     position: relative;
-    height: 340px;
-    padding: 0;
-    background-image: url("../img/tablet_bg_bike.png");
-    overflow: visible;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/tablet_bg_bike_x2.png");
-    }
+    top: unset;
+    left: unset;
   }
 
   .header__logo {
@@ -156,7 +79,7 @@
     height: 20px;
   }
 
-  .header__toggle {
+  .header__button {
     display: block;
     position: absolute;
     top: 0;
@@ -168,16 +91,15 @@
     background-repeat: no-repeat;
     outline: none;
     z-index: 2;
-  }
 
-  .header__navigation--closed .header__toggle {
-    background-image: url("../img/burger.svg");
-    background-color: $special-mint;
-  }
+    &--open {
+      background-color: $special-mint;
+    }
 
-  .header__navigation--opened .header__toggle {
-    background-image: url("../img/cross.svg");
-    background-color: $basic-white;
+    &--close {
+      display: none;
+      background-color: $basic-white;
+    }
   }
 
   .header__navigation--opened {
@@ -199,7 +121,7 @@
     z-index: 1;
   }
 
-  .header__list li {
+  .header__item {
     position: relative;
     width: 100%;
 
@@ -217,7 +139,7 @@
     }
   }
 
-  .header__list a {
+  .header__item a {
     display: block;
     width: 100%;
     margin: 0;
@@ -236,104 +158,25 @@
   }
 
   .header--nojs {
-    margin-top: 468px;
-
-    & .header__toggle {
+    & .header__button {
       display: none;
     }
 
     & .header__list {
       display: block;
-      position: absolute;
-      top: -468px;
+      position: static;
       min-height: 468px;
       padding-bottom: 0;
     }
 
     & .header__logo {
-      top: -443px;
       z-index: 2;
     }
-  }
-
-  .header__main {
-    display: block;
-    width: 435px;
-    margin: auto;
-    margin-top: 134px;
-  }
-
-  .header__intro {
-    width: auto;
-    text-align: center;
-
-    & h2 {
-      margin: 0 0 20px;
-      font-size: 30px;
-      line-height: 42px;
-    }
-
-    & p {
-      font-size: 18px;
-    }
-  }
-
-  .header__form {
-    width: 325px;
-    margin: 150px auto 0;
-
-    & p {
-      margin-bottom: 30px;
-      font-size: 18px;
-      color: $basic-black;
-    }
-  }
-
-  .header__input,
-  .header__button {
-    width: 321px;
-  }
-
-  .header__input {
-    color: $special-dark;
-    background-color: $basic-white;
   }
 }
 
 @media (max-width: $mobile-breakpoint) {
   .header__logo {
     left: 16px;
-  }
-
-  .header {
-    height: 390px;
-    background-image: url("../img/mobile_bg_bike.png");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/mobile_bg_bike_x2.png");
-    }
-  }
-
-  .header__main {
-    width: 288px;
-    margin-top: 120px;
-  }
-
-  .header__intro,
-  .header__form {
-    width: auto;
-  }
-
-  .header__form {
-    margin-top: 140px;
-
-    & p {
-      margin-bottom: 20px;
-    }
-  }
-
-  .header__input,
-  .header__button {
-    width: 288px;
   }
 }

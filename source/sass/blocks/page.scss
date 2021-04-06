@@ -1,7 +1,6 @@
-.page {
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: space-between;
+body {
+  display: flex;
+  flex-direction: column;
   min-height: 100%;
   margin: 0;
   padding: 0;
@@ -10,4 +9,11 @@
   color: $basic-black;
   background-color: $basic-white;
   overflow-x: auto;
+}
+
+@media (max-width: $tablet-breakpoint) {
+  body .header__navigation--opened {
+    height: 100vh;
+    overflow-y: hidden;
+  }
 }
