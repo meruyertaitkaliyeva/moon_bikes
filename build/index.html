@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Онлайн-магазин велосипедов Moon">
   <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-300.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-700.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.min.css">
@@ -31,22 +32,22 @@
       </button>
       <ul class="header__list">
         <li class="header__item">
-          <a href="#about">О нас</a>
+          <a class="header__link" href="#about">О нас</a>
         </li>
         <li class="header__item">
-          <a href="#types">Виды велосипедов</a>
+          <a class="header__link" href="#types">Виды велосипедов</a>
         </li>
         <li class="header__item">
-          <a href="#video">Видео про велосипеды</a>
+          <a class="header__link" href="#video">Видео про велосипеды</a>
         </li>
         <li class="header__item">
-          <a href="#contacts">Контакты</a>
+          <a class="header__link" href="#contacts">Контакты</a>
         </li>
       </ul>
     </nav>
   </header>
   <main class="main">
-    <header class="main__intro intro">
+    <div class="main__intro intro">
       <div class="intro__wrapper">
         <div class="intro__text">
           <svg width="68" height="21" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -70,7 +71,7 @@
           </form>
         </div>
       </div>
-    </header>
+    </div>
     <section id="about" class="main__facts facts">
       <h2>Несколько фактов о нас</h2>
       <ul class="facts__list">
@@ -124,14 +125,9 @@
         <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
       </div>
       <div class="video__pic">
-        <button class="video__button video__button--main" type="button" aria-label="Начать проигрывание">
+        <button class="video__button" type="button" aria-label="Начать проигрывание">
           <svg width="65" height="65" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
             <use xlink:href="img/sprite.svg#icon-play"></use>
-          </svg>
-        </button>
-        <button class="video__button video__button--tablet" type="button" aria-label="Начать проигрывание">
-          <svg width="91" height="91" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-            <use xlink:href="img/sprite.svg#icon-play-tablet"></use>
           </svg>
         </button>
         <picture>
@@ -145,7 +141,7 @@
     <section id="contacts" class="main__map map">
       <div class="map__intro">
         <h2>Как нас найти?</h2>
-        <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+        <p>Мы находимся по адресу: Санкт&#8209;Петербург, ул. Большая Конюшенная, д. 19</p>
       </div>
       <div class="map__wrapper">
         <iframe
@@ -181,8 +177,8 @@
       </li>
     </ul>
   </footer>
-  <script src="js/vendor/vendor.js"></script>
-  <script src="js/bundle.js"></script>
+  <script type="module" src="js/vendor.js"></script>
+  <script type="module" src="js/script.js"></script>
 </body>
 
 </html>

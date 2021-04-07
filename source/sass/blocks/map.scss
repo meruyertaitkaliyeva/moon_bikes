@@ -23,7 +23,8 @@
 
 .map__wrapper {
   position: relative;
-  width: 957px;
+  max-width: 957px;
+  width: 66.5%;
   height: 530px;
   margin: 0 auto;
 }
@@ -61,7 +62,7 @@
   }
 
   .map__wrapper {
-    width: 698px;
+    width: 91%;
     height: 545px;
   }
 }

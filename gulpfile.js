@@ -1,8 +1,6 @@
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
-const webpack = require('webpack-stream');
-var iife = require("gulp-iife");
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
@@ -13,25 +11,6 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
-
-//Webpack
-
-const script = () => {
-  return gulp.src('./source/js/modules/entry.js')
-    .pipe(webpack( require('./webpack.config.js') ))
-    .pipe(gulp.dest("source/js/"));
-}
-
-exports.script = script;
-
-//iife
-const iifeWrap = () => {
-  return gulp.src("source/js/bundle.js")
-    .pipe(iife())
-    .pipe(gulp.dest("build/js"));
-}
-
-exports.iifeWrap = iifeWrap;
 
 // Styles
 
@@ -93,7 +72,7 @@ const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/vendor/**"
+    "source/js/**"
   ], {
     base: "source"
   })
@@ -124,8 +103,6 @@ exports.html = html;
 const build = gulp.series(
   clean,
   copy,
-  script,
-  iifeWrap,
   styles,
   sprite,
   html

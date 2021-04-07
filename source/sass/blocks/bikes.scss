@@ -1,7 +1,7 @@
 .bikes {
   display: flex;
   flex-direction: column;
-  padding: 149px 0 147px;
+  padding: 149px 0 50px;
   background-color: $basic-grey;
 
   & h2 {
@@ -24,6 +24,7 @@
 
 .bikes__item {
   position: relative;
+  margin-bottom: 50px;
 
   &::before,
   &::after {
@@ -88,21 +89,13 @@
 
 .bikes__pic {
   width: 342px;
-  height: 503px;
+  max-height: 503px;
   margin-bottom: 20px;
   background-color: #d2baaa;
-
-  & img {
-    width: 342px;
-    height: 503px;
-  }
+  border-radius: 10px;
 
   &--mount {
-    height: 566px;
-
-    & img {
-      height: 566px;
-    }
+    max-height: 566px;
   }
 }
 
@@ -118,7 +111,6 @@
   }
 
   .bikes__list {
-    max-width: 590px;
     width: 77%;
   }
 
@@ -143,7 +135,8 @@
     }
 
     &--child {
-      margin: 50px auto 0;
+      margin-left: auto;
+      margin-right: auto;
 
       &::after {
         top: -20px;
@@ -156,12 +149,16 @@
   }
 
   .bikes__pic {
+    position: relative;
     width: 270px;
     height: 300px;
+    overflow: hidden;
 
     & img {
-      width: 270px;
-      height: 300px;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }
