@@ -7,4 +7,3 @@
   };
   const mask = IMask(element, maskOptions);
 }());
-
