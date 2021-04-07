@@ -88,7 +88,9 @@
 }
 
 .bikes__pic {
-  width: 342px;
+  max-width: 342px;
+  min-width: 270px;
+  width: 100%;
   max-height: 503px;
   margin-bottom: 20px;
   background-color: #d2baaa;
@@ -150,7 +152,7 @@
 
   .bikes__pic {
     position: relative;
-    width: 270px;
+    width: 79%;
     height: 300px;
     overflow: hidden;
 
@@ -165,6 +167,7 @@
 
 @media (max-width: $mobile-breakpoint) {
   .bikes {
+    flex-direction: column;
     padding: 52px 0 54px;
   }
 

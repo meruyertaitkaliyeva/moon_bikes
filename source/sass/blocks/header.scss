@@ -105,6 +105,14 @@
     }
   }
 
+  .hide {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
   .header__navigation--opened {
     position: relative;
     bottom: 0;
