@@ -1,6 +1,7 @@
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
+const webpack = require('webpack-stream');
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
@@ -11,6 +12,31 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
+
+//Webpack
+
+// const vendor = () => {
+//   return gulp.src('./source/js/vendor/imask.js')
+//     .pipe(webpack({
+//       entry: {
+//         smoothscroll: './source/js/vendor/smoothscroll-polyfill.js',
+//       },
+//       output: {
+//         filename: 'vendor.js',
+//       },
+//     }))
+//     .pipe(gulp.dest('build/js'));
+// }
+
+// exports.vendor = vendor;
+
+const script = () => {
+  return gulp.src('./source/js/script.js')
+    .pipe(webpack( require('./webpack.config.js') ))
+    .pipe(gulp.dest('build/js'));
+}
+
+exports.script = script;
 
 // Styles
 
@@ -72,7 +98,7 @@ const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**"
+    // "source/js/*.js"
   ], {
     base: "source"
   })
@@ -103,6 +129,8 @@ exports.html = html;
 const build = gulp.series(
   clean,
   copy,
+  // vendor,
+  script,
   styles,
   sprite,
   html
