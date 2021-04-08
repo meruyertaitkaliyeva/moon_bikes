@@ -15,20 +15,20 @@ const sync = require("browser-sync").create();
 
 //Webpack
 
-// const vendor = () => {
-//   return gulp.src('./source/js/vendor/imask.js')
-//     .pipe(webpack({
-//       entry: {
-//         smoothscroll: './source/js/vendor/smoothscroll-polyfill.js',
-//       },
-//       output: {
-//         filename: 'vendor.js',
-//       },
-//     }))
-//     .pipe(gulp.dest('build/js'));
-// }
+const vendor = () => {
+  return gulp.src('./source/js/vendor.js')
+    .pipe(webpack({
+      entry: {
+        imask: './source/js/vendor/imask.js',
+      },
+      output: {
+        filename: 'vendor.js',
+      },
+    }))
+    .pipe(gulp.dest('build/js'));
+}
 
-// exports.vendor = vendor;
+exports.vendor = vendor;
 
 const script = () => {
   return gulp.src('./source/js/script.js')
@@ -129,7 +129,7 @@ exports.html = html;
 const build = gulp.series(
   clean,
   copy,
-  // vendor,
+  vendor,
   script,
   styles,
   sprite,

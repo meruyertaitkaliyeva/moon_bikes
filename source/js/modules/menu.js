@@ -13,8 +13,10 @@
     if (navMain.classList.contains("header__navigation--closed")) {
       navMain.classList.remove("header__navigation--closed");
       navMain.classList.add("header__navigation--opened");
-      navOpenButton.style.display = "none";
-      navCloseButton.style.display = "block";
+      navOpenButton.classList.remove("show");
+      navOpenButton.classList.add("hide");
+      navCloseButton.classList.remove("hide");
+      navCloseButton.classList.add("show");
       const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
       body.style.position = 'fixed';
       body.style.width = '100%';
@@ -25,8 +27,10 @@
   navCloseButton.addEventListener("click", function () {
     navMain.classList.add("header__navigation--closed");
     navMain.classList.remove("header__navigation--opened");
-    navCloseButton.style.display = "none";
-    navOpenButton.style.display = "block";
+    navCloseButton.classList.remove("show");
+    navCloseButton.classList.add("hide");
+    navOpenButton.classList.remove("hide");
+    navOpenButton.classList.add("show");
     const scrollY = body.style.top;
     body.style.position = '';
     body.style.top = '';
