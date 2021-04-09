@@ -13,12 +13,12 @@
 
 <body>
   <header class="header header--nojs">
-    <span class="header__logo">
+    <a class="header__logo">
       <svg width="68" height="21" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
         aria-label="Логотип Mono">
         <use xlink:href="img/sprite.svg#icon-logo"></use>
       </svg>
-    </span>
+    </a>
     <nav class="header__navigation header__navigation--closed">
       <button class="header__button header__button--open" type="button" aria-label="Открыть меню">
         <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -90,7 +90,7 @@
               <source srcset="img/desktop_road_bike.webp 1x, img/desktop_road_bike_x2.webp 2x" type="image/webp">
               <!-- 1x: 342px; 2x: 684px -->
               <img src="img/desktop_road_bike.jpg" srcset="img/desktop_road_bike_x2.jpg 2x" width="342" height="503"
-                alt="Дорожный велосипед">
+                alt="Дорожный велосипед" loading="lazy">
             </picture>
           </div>
           <p>Дорожный велосипед</p>
@@ -101,7 +101,7 @@
               <source srcset="img/desktop_mount_bike.webp 1x, img/desktop_mount_bike_x2.webp 2x" type="image/webp">
               <!-- 1x: 342px; 2x: 684px -->
               <img src="img/desktop_mount_bike.jpg" srcset="img/desktop_mount_bike_x2.jpg 2x" width="342" height="566"
-                alt="Горный велосипед">
+                alt="Горный велосипед" loading="lazy">
             </picture>
           </div>
           <p>Горный велосипед</p>
@@ -112,7 +112,7 @@
               <source srcset="img/desktop_child_bike.webp 1x, img/desktop_child_bike_x2.webp 2x" type="image/webp">
               <!-- 1x: 342px; 2x: 684px -->
               <img src="img/desktop_child_bike.jpg" srcset="img/desktop_child_bike_x2.jpg 2x" width="342" height="503"
-                alt="Детский велосипед">
+                alt="Детский велосипед" loading="lazy">
             </picture>
           </div>
           <p>Детский велосипед</p>
@@ -134,7 +134,7 @@
           <source srcset="img/desktop_video.webp 1x, img/desktop_video_x2.webp 2x" type="image/webp">
           <!-- 1x: 929px; 2x: 1858px -->
           <img src="img/desktop_video.jpg" srcset="img/desktop_video_x2.jpg 2x" width="929" height="522"
-            alt="Велосипед">
+            alt="Велосипед" loading="lazy">
         </picture>
       </div>
     </section>
@@ -146,20 +146,20 @@
       <div class="map__wrapper">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651577!2d30.320894615967116!3d59.93879418187627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1617437422074!5m2!1sru!2sru"
-          class="map__google" allowfullscreen="" aria-hidden="false" tabindex="0">
+          class="map__google" allowfullscreen="" aria-hidden="false" tabindex="0" loading="lazy">
         </iframe>
         <picture>
           <source srcset="img/desktop_map.webp 1x, img/desktop_map_x2.webp 2x" type="image/webp">
           <!-- 1x: 957px; 2x: 1914px -->
           <img src="img/desktop_map.jpg" srcset="img/desktop_map_x2.jpg 2x" width="959" height="530"
-            alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19">
+            alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19" loading="lazy">
         </picture>
       </div>
     </section>
   </main>
   <footer class="footer">
     <ul class="footer__list">
-      <li class="footer__item">
+      <li class="footer__item footer__item--mail">
         <a href="mailto:puteshestviemechta@gmail.ru">
           <svg width="26" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
             <use xlink:href="img/sprite.svg#icon-mail"></use>
@@ -167,7 +167,7 @@
           puteshestviemechta@gmail.ru
         </a>
       </li>
-      <li class="footer__item">
+      <li class="footer__item footer__item--phone">
         <a href="tel:+749978468446">
           <svg width="21" height="22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
             <use xlink:href="img/sprite.svg#icon-phone"></use>

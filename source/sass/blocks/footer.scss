@@ -47,11 +47,11 @@
 
 @media (max-width: $tablet-breakpoint) {
   .footer {
-    padding: 20px 105px 52px;
+    padding: 22px 0 53px;
   }
 
   .footer__list {
-    padding-right: 10px;
+    width: 555px;
   }
 
   .footer__item:not(:last-of-type) {
@@ -66,7 +66,13 @@
 
   .footer__list {
     flex-direction: column;
-    width: 100%;
+    width: 268px;
     padding: 0 0 0 10px;
+  }
+
+  .footer__item {
+    &--phone {
+      margin-right: 15px;
+    }
   }
 }
