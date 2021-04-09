@@ -59,11 +59,14 @@
         <div class="intro__form">
           <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
           <form method="get">
-            <div class="intro__input">
+            <div class="intro__input intro__input--name">
               <label class="visually-hidden" for="name">Имя</label>
               <input id="name" type="text" name="name" placeholder="Введите Ваше Имя" required>
             </div>
-            <div class="intro__input">
+            <div class="intro__error hide">
+              <p>Вы неверное ввели номер</p>
+            </div>
+            <div class="intro__input intro__input--tel">
               <label class="visually-hidden" for="tel">Телефон</label>
               <input id="tel" type="tel" name="tel" placeholder="Введите Ваш номер телефона" required>
             </div>

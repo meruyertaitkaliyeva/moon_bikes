@@ -102,6 +102,29 @@
   }
 }
 
+.intro__input {
+  &--tel p {
+    display: none;
+  }
+}
+
+.intro__error p {
+  display: block;
+  margin: -15px 0 0;
+  font-size: 15px;
+  line-height: 15px;
+  color: $special-mint;
+  letter-spacing: 1px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 @media (max-width: $tablet-breakpoint) {
   .intro {
     height: 340px;
