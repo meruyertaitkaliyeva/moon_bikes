@@ -48,6 +48,7 @@
 
 @media (max-width: $tablet-breakpoint) {
   .footer {
+    width: 72%;
     min-height: 98px;
     padding: 22px 0 53px;
   }
@@ -63,6 +64,7 @@
 
 @media (max-width: $mobile-breakpoint) {
   .footer {
+    width: 87.5%;
     min-height: 151px;
     padding: 11px 0 50px;
   }
