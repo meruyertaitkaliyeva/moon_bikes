@@ -1,7 +1,7 @@
 .map {
   display: flex;
   flex-direction: column;
-  padding-top: 251px;
+  padding: 251px 0 0;
 }
 
 .map__intro {
@@ -47,7 +47,7 @@
 
 @media (max-width: $tablet-breakpoint) {
   .map {
-    padding-top: 154px;
+    padding: 154px 0 0;
   }
 
   .map__intro {
@@ -69,7 +69,7 @@
 
 @media (max-width: $mobile-breakpoint) {
   .map {
-    padding-top: 119px;
+    padding: 119px 0 0;
   }
 
   .map__intro {
